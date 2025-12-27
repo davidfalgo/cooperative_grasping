@@ -23,6 +23,8 @@ Accepted: IEEE Robotics and Automation Letters, 2025
 
 ## Citation
 
+If you use this code, please cite:
+
 ```bibtex
 @article{alvear2025coopgrasp,
   author={David Alvear, George Turkiyyah, and Shinkyu Park},
@@ -31,10 +33,6 @@ Accepted: IEEE Robotics and Automation Letters, 2025
   year={2025},
 }
 ```
-
-If you use this code, please cite:
-
-
 
 ## License
 
