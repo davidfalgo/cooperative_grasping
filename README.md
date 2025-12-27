@@ -29,10 +29,6 @@ Accepted: IEEE Robotics and Automation Letters, 2025
   journal={IEEE Robotics and Automation Letters}, 
   title={Cooperative Grasping for Collective Object Transport in Constrained Environments}, 
   year={2025},
-  <!--volume={10},
-  number={9},
-  pages={9216-9223},
-  doi={10.1109/LRA.2025.3592080}-->
 }
 ```
 
