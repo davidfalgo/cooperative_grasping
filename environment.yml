@@ -1,0 +1,45 @@
+name: ce_model
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  # Core
+  - python=3.10
+  - pytorch=2.3
+  - torchvision
+  - torchaudio
+  - cudatoolkit=11.8
+
+  # Scientific stack
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - tqdm
+  - yaml
+  - pandas
+  - ipython
+
+  # Experiment tracking
+  - wandb
+
+  # Visualization, I/O
+  - pillow
+
+  # Jupyter ecosystem
+  - notebook         # Classic Jupyter Notebook
+  - jupyterlab       # JupyterLab interface
+  - ipykernel        # Kernel for this conda env
+  - jupyter_core
+  - jupyter_client
+  - nb_conda_kernels # (optional) show all kernels in all environments
+
+  # Misc
+  - pip
+  - pip:
+    - opencv-python
+    - torchinfo
+  # - pip:
+  #     - simulation   # <-- add local repo path if needed
