@@ -15,12 +15,8 @@ import numpy as np
 from torch import nn
 from tqdm import tqdm
 from types import SimpleNamespace
-from simulation.utils import *
-from TrainNS_models import *
 from torchinfo import summary
 import torch.nn.functional as F
-from TrainNS_dataloader import *
-from simulation.utils import Dataset
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset as TorchDataset
 from sklearn.metrics import roc_curve, auc, precision_recall_curve
@@ -31,6 +27,10 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+
+from conditional_embedding_model.utils import Dataset
+from conditional_embedding_model.data.dataloader import *
+from conditional_embedding_model.models import *
 
 class EarlyStopping:
     def __init__(self, patience=10, min_delta=0.0, restore_best_weights=True, verbose=True):

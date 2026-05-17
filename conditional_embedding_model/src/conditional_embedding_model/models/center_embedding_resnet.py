@@ -15,11 +15,12 @@ from tqdm import tqdm
 from torchinfo import summary
 from torchvision import models
 import torch.nn.functional as F
-from TrainNS_dataloader import *
+# from TrainNS_dataloader import *
 from torchvision import transforms
-from simulation.utils import Dataset
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset as TorchDataset
+from conditional_embedding_model.data import *
+from conditional_embedding_model.utils import *
 
 ############################################################################################################
 ######################################## Model v0 simple ##################################################

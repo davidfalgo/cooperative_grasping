@@ -9,9 +9,9 @@ import random
 import collections
 import numpy as np
 from sklearn.metrics import pairwise_distances
-from simulation.utils import Dataset
 from torch.utils.data import random_split
 from torch.utils.data import DataLoader, Dataset as TorchDataset
+from conditional_embedding_model.utils import Dataset
 
 def divide_dataset(dataset, test_prop=0.1, val_prop=0.2):
     dataset_length = len(dataset)
