@@ -92,6 +92,23 @@ Experiment sequence showing the two mobile manipulators executing the full coope
 
 ---
 
+## Generalized CE package
+
+The paper's `CenterEmbeddingResNetv4`-era code is being generalized into a
+reusable, config-driven package under
+`conditional_embedding_model/src/conditional_embedding_model/general/`:
+pluggable encoders, pluggable affinity scorers, and a generic training loop,
+while every legacy checkpoint stays loadable without file conversion. See
+[`general/README.md`](conditional_embedding_model/src/conditional_embedding_model/general/README.md)
+for the architecture, config reference, legacy-checkpoint how-to, and known
+quirks. A fully synthetic, CPU-only smoke test/example is runnable directly:
+
+```bash
+python -m conditional_embedding_model.general.examples.toy
+```
+
+---
+
 ## Citation
 
 If you use this work, please cite:

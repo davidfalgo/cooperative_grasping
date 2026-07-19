@@ -23,6 +23,11 @@ from conditional_embedding_model.general import (
 )
 from conditional_embedding_model.general.registry import register_scorer, SCORER_REGISTRY
 
+# run_all.py --fast convention: test_config_only_encoder_swap's legacy_v4 branch
+# constructs a real resnet18 backbone (pretrained=True); it already self-skips on
+# any exception, but is excluded from --fast to guarantee no network touch.
+SLOW = {"test_config_only_encoder_swap"}
+
 B, K, M, E, R = 3, 5, 7, 8, 4
 
 

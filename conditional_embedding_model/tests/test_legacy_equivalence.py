@@ -19,6 +19,11 @@ from conditional_embedding_model.models.center_embedding_resnet import (
 from conditional_embedding_model.general import CEModel, CEModelConfig, EncoderConfig, ScorerConfig, parse_legacy_filename
 from conditional_embedding_model.general.encoders.legacy import LegacyV4CenterEncoder
 
+# run_all.py --fast convention: these construct real resnet18 backbones
+# (pretrained=True) via the legacy v4/v5 classes -- torchvision may attempt a
+# weight download if the local cache is cold, so they're excluded from --fast.
+SLOW = {"test_v4_equivalence", "test_v5_equivalence"}
+
 FEATURE_STRUCTURE = {
     "features_structured": {"map": 8100, "object_footprint": 8, "grasping_approach": 600},
     "features_shape": {"map": (90, 90), "object_footprint": (4, 2), "grasping_approach": (150, 4)},

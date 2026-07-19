@@ -28,6 +28,11 @@ from conditional_embedding_model.general.training import (
     make_collate, LegacyBatchAdapter, Trainer, load_model,
 )
 
+# run_all.py --fast convention: test_legacy_pipeline_smoke's model-building branch
+# constructs a real resnet18 backbone (pretrained=True); it already self-skips on
+# any exception, but is excluded from --fast to guarantee no network touch.
+SLOW = {"test_legacy_pipeline_smoke"}
+
 
 # --------------------------------------------------------------------------- #
 # Criterion 1: loss parity with legacy DynamicSigmoidBCELoss
